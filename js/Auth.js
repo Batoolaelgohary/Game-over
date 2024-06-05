@@ -1,3 +1,3 @@
-if (localStorage.getItem('uToken') === null) {
+if (localStorage.getItem('token') === null) {
     location.href ='../index.html'
 }

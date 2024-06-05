@@ -70,7 +70,7 @@ async function login(userData) {
     console.log(response);
     
     if (response.message === 'success') {
-        localStorage.setItem("uToken", response.token);
+        localStorage.setItem("token", response.token);
         location.href = './../Home.html';
         loginBtn.innerHTML = "Login";
     } else {

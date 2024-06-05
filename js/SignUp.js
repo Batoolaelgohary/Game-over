@@ -84,7 +84,7 @@ async function signUp(userData) {
     const response = await api.json();
     console.log(response);
     if (response.message === 'success') {
-        localStorage.setItem("uToken", response.token);
+        localStorage.setItem("token", response.token);
         location.href='./../Home.html'
     } else {
         document.getElementById('error').innerHTML = response.errors.email.message;
