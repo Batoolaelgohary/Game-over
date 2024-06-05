@@ -1,0 +1,241 @@
+[data-theme="dark"] {
+    --MainColor: #5b5b5b;
+    --SoftColor: #76B0A0;
+    --PrimaryColor: #6F7B84;
+    --LightColor: #89afa4;
+    --themeColor: #fff;
+    --shadowColor: #5b5b5bca;
+}
+
+[data-theme="light"] {
+    --MainColor: #fff;
+    --SoftColor: #76B0A0;
+    --PrimaryColor: #c5c4c4;
+    --LightColor: #89afa4;
+    --themeColor: #000;
+    --shadowColor: rgba(187, 188, 188, 0.89);
+}
+
+body {
+    background-color: var(--shadowColor);
+    color: var(--themeColor);
+    padding-block: 15px;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--shadowColor);
+    z-index: -1;
+}
+main{
+    .link{
+        display: flex;
+        justify-content: end;
+        font-size: 24px;
+        a{
+            font-size: 24px;
+            text-decoration: underline;
+            color: var(--SoftColor);
+        }
+        span{
+            padding-inline: 5px;
+        }
+    }
+    .row{
+        justify-content: center !important;
+        align-items: center !important;
+        .game-img{
+            width: 100%;
+        }
+        .game-info{
+            h1{
+                color: var(--LightColor);
+                font-size: 60px;
+            }
+            .game-footer{
+                display: flex;
+                justify-content: space-between;
+                padding-block: 10px;
+                border-top: 1px solid var(--LightColor);
+            }
+            a{
+                border: 1px solid var(--LightColor);
+                border-radius: 5px;
+                padding: 5px;
+                color:  var(--LightColor);
+                display: block;
+                text-align: center;
+                transition: 1s color,1s background-color;
+                &:hover{
+                    background-color: var(--LightColor);
+                    color: var(--themeColor);
+                }
+            }
+        }
+    }
+}
+                .loading {
+                    position: fixed;
+                    z-index: 9999;
+                    inset: 0;
+                    background-color: #272b30e3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    .loader {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        border-top: 4px solid var(--LightColor);
+                        border-right: 4px solid transparent;
+                        box-sizing: border-box;
+                        animation: rotation 1s linear infinite;
+                        position: relative;
+        
+                        &::after {
+                            content: "";
+                            box-sizing: border-box;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            border-left: 4px solid var(--SoftColor);
+                            border-bottom: 4px solid transparent;
+                            animation: rotation 0.5s linear infinite reverse;
+                        }
+                    }
+                }
+        
+                @keyframes rotation {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+        
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                /* Media Query  */
+@media screen and (max-width:576px) {
+main {
+    
+        .link {
+            font-size: 16px;
+            padding-block: 10px;
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .row {
+            gap: 20px;
+            justify-content: center !important;
+                flex-direction: column;
+                align-items: center !important;
+            .game-img {
+                    img{
+                        width: 100%;
+                    }
+                }
+            .game-info {
+                h1 {
+                    font-size: 28px;
+                }
+
+
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+main {
+        .link {
+            font-size: 20px;
+            padding-block: 10px;
+            a {
+                font-size: 20px;
+            }
+        }
+
+        .row {
+            gap: 25px;
+            justify-content: center !important;
+                flex-direction: column;
+                align-items: center !important;
+            .game-img {
+                    img {
+                        width: 75%;
+                    }
+                }
+            .game-info {
+                h1 {
+                    font-size: 40px;
+                }
+
+                
+
+            }
+        }
+    }
+}
+
+    @media screen and (min-width:769px) and (max-width:992px) {
+        main {
+                .link {
+                    font-size: 20px;
+                    padding-block: 10px;
+        
+                    a {
+                        font-size: 20px;
+                    }
+                }
+        
+                .row {
+                    gap: 25px;
+                    justify-content: center !important;
+                    flex-direction: column;
+                    align-items: center !important;
+                    .game-img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+        
+                    .game-info {
+                        h1 {
+                            font-size: 48px;
+                        }
+                        
+                    }
+                }
+            }
+    }
+    @media screen and (min-width:993px) and (max-width:1200px) {
+        main {
+                .row {
+                    gap: 0;
+                    display: flex !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+        
+        
+        
+        
+        
+                }
+            }
+    }
+
+ 

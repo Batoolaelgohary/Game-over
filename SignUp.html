@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title><link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
+    <!-- CSS links -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/SignUp.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- font family links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+<main class="main-container">
+    <div class="row">
+        <section class="icon">
+            <img src="./assets/images/icon.jpg" alt="">
+        </section>
+        <section class="login-info">
+            <h1>Create Account!</h1>
+            <form>
+                <div class="name-input">
+                    <div class="name">
+                        <input type="text" placeholder="Enter Your First Name">
+                        <input type="text" placeholder="Enter Your Last Name">
+                        
+                    </div>
+                    <p id="name" class="d-none">Name must be at least 2 letters</p>
+                </div>
+                <div class="email">
+                    <input type="email" placeholder="Enter Your Email">
+                    <p id="email" class="d-none">Please enter a valid email</p>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Enter Your Password">
+                    <p id="password" class="d-none">Please enter a valid password</p>
+                </div>
+                <div class="age">
+                    <input type="text" placeholder="Enter Your Age">
+                    <p id="age" class="d-none">18-60</p>
+                </div>
+                <p id="error"></p>
+                <button class="btn" id="signup-btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <span><a href="./index.html">Log in</a></span></p>
+        </section>
+    </div>
+    <div >
+        <i id="mode" class="fa-solid fa-sun"></i>
+    </div>
+</main>
+<!-- javaScript link -->
+    <script src="./js/SignUp.js"></script>
+</body>
+</html>

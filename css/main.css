@@ -1,0 +1,241 @@
+[data-theme="dark"]{
+  --MainColor:#5b5b5b85;
+  --SoftColor:#76B0A0;
+  --PrimaryColor:#6F7B84;
+  --LightColor:#89afa4;
+  --themeColor:#fff;
+}
+[data-theme ="light"]{
+  --MainColor:#fff;
+  --SoftColor:#76B0A0;
+  --PrimaryColor:#c5c4c4;
+  --LightColor:#89afa4;
+  --themeColor:#000;
+} 
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya", serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.main-container {
+  background-color: var(--MainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .row{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PrimaryColor);
+    border-radius: 10px;
+    padding: 20px;
+    .icon {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+        img {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    
+      .login-info {
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        color:var(--themeColor);
+        h1{
+          font-size: 50px;
+        }
+        form {
+        div ,p{
+          margin-bottom: 10px;
+          padding-bottom: 0;
+          font-size: 12px;
+          color: rgb(145, 11, 11);
+          font-weight: bold;
+          text-transform: capitalize;
+
+        }
+          input {
+            margin-bottom: 0;
+            width: 98%;
+            padding-block: 10px;
+            padding-left: 5px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background-color:var(--MainColor);
+            color: var(--themeColor);
+            &::placeholder{
+              color: var(--themeColor);
+            }
+          }
+          
+          .btn {
+            display: block;
+            margin-left:auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            background-color: var(--MainColor);
+            transition: 1s background-color, 1s color, 1s border;
+            color: var(--themeColor);
+            margin-bottom: 10px;
+            
+            &:hover {
+              border: 1px solid var(--MainColor);
+              background-color:transparent;
+              color: var(--themeColor);
+            }
+          }
+          
+        }
+        p{
+          font-size: 14px;
+          text-align: end;
+          span{
+            a{
+              color:var(--MainColor);
+              font-weight: bold;
+            }
+          }
+        }
+      }
+  }
+
+}
+
+#mode{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+    font-size: 24px;
+    color: var(--themeColor);
+}
+
+
+  /* Media Query  */
+@media screen and (max-width:576px) {
+  .main-container {
+      .row {
+        width: 90%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .icon {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .login-info {
+          width: 100%;
+          h1 {
+            font-size: 28px;
+            padding-block: 10px;
+          }
+          form {
+            div,
+            p {
+              font-size: 10px;
+            }
+            
+          }
+        }
+      }
+  
+    }
+  
+    #mode {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+}
+                
+@media screen and (min-width:577px) and (max-width:768px) {
+  .main-container {
+      .row {
+        width: 80%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 10px;
+  
+        .icon {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        .login-info {
+          width: 100%;
+  
+          h1 {
+            font-size: 32px;
+            padding-block: 10px;
+          }
+  
+          form {
+  
+            div,
+            p {
+              font-size: 12px;
+            }
+            
+          }
+        }
+      }
+  
+    }
+    #mode {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+}
+                
+@media screen and (min-width:769px) and (max-width:992px) {
+    .main-container {
+        .row {
+          .login-info {
+            width: 100%;
+            h1 {
+              font-size: 38px;
+              padding-block: 10px;
+            }
+            
+          }
+        }
+    
+      }
+    
+      #mode {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+}
+                
+                
+@media screen and (min-width:993px) and (max-width:1200px) {}
