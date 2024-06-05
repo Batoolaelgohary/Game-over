@@ -37,7 +37,7 @@ navLink.forEach((link) => {
 
 document.getElementById('logOut').addEventListener('click', () => {
     localStorage.removeItem('uToken');
-    location.href = './../index.html';
+    location.href = './index.html';
 })
 mode.addEventListener('click', (e) => {
     if (mode.classList.contains('fa-sun')) {
