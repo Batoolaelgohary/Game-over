@@ -68,7 +68,7 @@ function stopVideo(event) {
       }
 function gameDetails(id) {
     console.log(id);
-    location.href =`../Details.html?id=${id}`
+    location.href =`./Details.html?id=${id}`
 }
 async function getGames(category) {
     loading.classList.remove('d-none')
