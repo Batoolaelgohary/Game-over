@@ -71,7 +71,7 @@ async function login(userData) {
     
     if (response.message === 'success') {
         localStorage.setItem("token", response.token);
-        location.href = './../Home.html';
+        location.href = './Home.html';
         loginBtn.innerHTML = "Login";
     } else {
         document.getElementById('error').innerHTML = response.message;

@@ -85,7 +85,7 @@ async function signUp(userData) {
     console.log(response);
     if (response.message === 'success') {
         localStorage.setItem("token", response.token);
-        location.href='./../Home.html'
+        location.href='./Home.html'
     } else {
         document.getElementById('error').innerHTML = response.errors.email.message;
         signUpBtn.innerHTML = "Sign up"
