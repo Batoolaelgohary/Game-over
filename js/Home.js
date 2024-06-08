@@ -36,7 +36,7 @@ navLink.forEach((link) => {
 })
 
 document.getElementById('logOut').addEventListener('click', () => {
-    localStorage.removeItem('uToken');
+    localStorage.removeItem('token');
     location.href = './index.html';
 })
 mode.addEventListener('click', (e) => {
