@@ -1,3 +1,3 @@
 if (localStorage.getItem('token') === null ) {
-    location.href = './index.html';
+    location.href = 'index.html';
 }
